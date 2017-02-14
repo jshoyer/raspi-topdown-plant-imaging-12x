@@ -240,26 +240,33 @@ for taking and viewing a single snapshot.
    the light schedule will eventually shift far enough
    that the first photo of the day will be captured
    before "sunrise".
-3. If you are not using a UTC locale,
+3. We have used our local timezone in the past,
+   but now recommend using Universal Coordinated Time (UTC)
+   to avoid potential for confusion and/or loss of data
+   caused by the start and end of daylight savings time.
+   If you are not using UTC
+   (controlled via =raspi-config= internalization settings),
    the start and end of daylight savings time
    may trigger an automatic clock shift on each raspi,
    which can result in the photo capture schedule
    being offset by one hour
    relative to the light cycle.
-   We have imaged from
-   9:30 AM to 5:30 PM local time
-   during DST
-   (CDT is UTC -0500)
-   and 8:30 PM to 4:30 PM
-   for the rest of the year
-   (CST is UTC -0600),
-   These are both equivalent to 1430 to 2230 UTC.
+   - We have imaged from
+     9:30 AM to 5:30 PM local time
+     during DST
+     (CDT is UTC -0500)
+     and 8:30 PM to 4:30 PM
+     for the rest of the year
+     (CST is UTC -0600),
+     These are both equivalent to 1430 to 2230 UTC.
    - Some growth chamber controllers
      automatically shift the light cycle
-     at the start and end of daylight savings time,
-     but this is arguably bad,
+     at the start and end of daylight savings time.
+     This shift is arguably bad,
      because re-entrainment of plant circadian clocks
      to the new light schedule can alter growth.
+     Shifting the start of zeitgeber (ZT) time
+     also makes the experiment more difficult to describe.
 4. Make sure your raspis are drawing sufficient power!
    The camera boards draw extra power during photo capture,
    which can cause one or more raspis
