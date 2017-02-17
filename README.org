@@ -252,6 +252,9 @@ for taking and viewing a single snapshot.
       built into the growth chamber,
       via an extension cord
       threaded through a port built into the exterior of the chamber.)
+     We use [[file:shut-down-all-12-raspis][a shell script]]
+     to shut down our twelve RasPis,
+     and they turn back on automatically after power is restored.
 3. We have used our local timezone in the past,
    but now recommend using Universal Coordinated Time (UTC)
    to avoid potential for confusion and/or loss of data
@@ -283,6 +286,7 @@ for taking and viewing a single snapshot.
    The camera boards draw extra power during photo capture,
    which can cause one or more raspis
    sharing an inadequate power supply to crash.
+   See https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
 
 
 **** Monitoring
