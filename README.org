@@ -242,6 +242,16 @@ for taking and viewing a single snapshot.
    the light schedule will eventually shift far enough
    that the first photo of the day will be captured
    before "sunrise".
+   - The most reliable way to deal with this issue
+     is to manually calibrate the chamber clock
+     shortly before the start of every new experiment.
+     Adjusting the clock in our growth chamber
+     requires shutting it down,
+     which in turn necessitates turning off each RasPi.
+     (Our twelve RasPis use a GFCI-protected auxiliary power outlet
+      built into the growth chamber,
+      via an extension cord
+      threaded through a port built into the exterior of the chamber.)
 3. We have used our local timezone in the past,
    but now recommend using Universal Coordinated Time (UTC)
    to avoid potential for confusion and/or loss of data
