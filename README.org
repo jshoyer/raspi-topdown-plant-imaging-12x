@@ -327,7 +327,6 @@ for related research papers.
 
 Questions, feedback, and contributions
 are welcome
-via GitHub
-(and Bitbucket
- or GitLab.com,
- soon enough).
+via GitHub,
+Bitbucket,
+or GitLab.com.
