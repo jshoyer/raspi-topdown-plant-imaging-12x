@@ -47,7 +47,7 @@ for developing and practicing command line skills.
 
 Copyright © 2017
 [Donald Danforth Plant Science Center](https://www.danforthcenter.org/).
-See <LICENSE-MIT>.
+See [LICENSE-MIT](LICENSE-MIT).
 
 ### Links
 
@@ -85,14 +85,14 @@ including a timelapse video of rosette growth.
 
 We install a cron table on each raspi.
 There are two variants of this cron table:
-<photograph-every-5min.crontab> and
-<photograph-with-flips-every-5min.crontab>.
+[photograph-every-5min.crontab](photograph-every-5min.crontab) and
+[photograph-with-flips-every-5min.crontab](photograph-with-flips-every-5min.crontab).
 These are nearly identical
 but the second one does horizontal and vertical flips
 (`-vf -hf` flags)
 because five of our Pi/Camera rigs
 are oriented 180° opposite the others.
-Files get names like '2017-02-10<sub>1630</sub><sub>ch129</sub>-pos01.jpg',
+Files get names like '2017-02-10_1630_ch129-pos01.jpg',
 where '1630' indicates 4:30 PM (the last capture of the day)
 and 'ch129-pos01' is the hostname
 (chamber 129 position #1, above field-of-view #1).
@@ -138,7 +138,7 @@ in between imaging experiments
 
 File transfer is scheduled with a separate cron table
 installed on a server:
-<pull-images-from-raspis.crontab>.
+[pull-images-from-raspis.crontab](pull-images-from-raspis.crontab).
 Syncing photos to a cluster
 makes them easier to process/monitor,
 and lets us collect more photos
@@ -160,7 +160,7 @@ image capture on all twelve raspis at once.
     `./install-twelve-crontabs`
 
 -   A second script
-    (<install-twelve-mini-crontabs>)
+    ([install-twelve-mini-crontabs](install-twelve-mini-crontabs))
     is used at the end of an experiment (see below)
     to install the minimal cron tables described above
     and thereby suspend image capture.
