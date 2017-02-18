@@ -305,7 +305,7 @@ Multiple failed transfers
 can indicate that a raspi has crashed,
 especially when initial connection was the step that failed.
 
-We addionally use
+We additionally use
 a [[http://bioinformatics.danforthcenter.org/ganglia/?r=hour&cs=&ce=&c=jcc-pi&h=&tab=m&vn=&hide-hf=false&m=pkts_out&sh=1&z=small&hc=4&host_regex=&max_graphs=0&s=by+name][Ganglia dashboard]]
 for monitoring.
 See http://ganglia.info
