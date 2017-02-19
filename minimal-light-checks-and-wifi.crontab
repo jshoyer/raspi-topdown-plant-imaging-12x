@@ -1,6 +1,8 @@
 
-# Standard raspi 8-hour day photograph time checks (optional)
-# plus disconnection of wifi at night.
+# Standard raspi 8-hour day maintenance schedule
+# (for in between experiments):
+# disconnect wifi at night
+# and optionally use photographs to monitor clock/light schedule drift.
 
 # Copyright (c) 2017 Donald Danforth Plant Science Center -- see LICENSE-MIT
 # mail to j.s.hoyer at wustl dot edu

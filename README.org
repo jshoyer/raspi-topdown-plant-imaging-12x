@@ -237,7 +237,9 @@ for taking and viewing a single snapshot.
 2. The clock built into our growth chamber control board
    does not automatically recalibrate itself
    by synchronizing with a server,
-   and so the clock steadily drifts forward.
+   and so the clock steadily drifts forward,
+   at a rate of ~3 seconds per day
+   (~1 minute every three weeks).
    Unless the clock is manually corrected,
    the light schedule will eventually shift far enough
    that the first photo of the day will be captured
@@ -304,6 +306,9 @@ until the next cycle.
 Multiple failed transfers
 can indicate that a raspi has crashed,
 especially when initial connection was the step that failed.
+(Interrupted transfers are a lagging indicator,
+ because rsync processes persist for quite a while
+ before they "give up.")
 
 We additionally use
 a [[http://bioinformatics.danforthcenter.org/ganglia/?r=hour&cs=&ce=&c=jcc-pi&h=&tab=m&vn=&hide-hf=false&m=pkts_out&sh=1&z=small&hc=4&host_regex=&max_graphs=0&s=by+name][Ganglia dashboard]]
