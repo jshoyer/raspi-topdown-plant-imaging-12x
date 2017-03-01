@@ -3,10 +3,13 @@
 # Copyright (c) 2017 Donald Danforth Plant Science Center -- see LICENSE-MIT
 # mail to j.s.hoyer at wustl dot edu
 
-# For error alert emails: if desired.
+# For error alert emails, if desired:
 # MAILTO=
 
 # Other crontabs in this directory take care of the raspi end of things.
+# Those crontables assume the the timezone is set to UTC,
+# but this table uses our local time.
+# This will cause a mismatch right after daylights savings time ends.
 
 RASPIDIR=/home/pi/images
 # Adjust this line at the start of each new experiment:
