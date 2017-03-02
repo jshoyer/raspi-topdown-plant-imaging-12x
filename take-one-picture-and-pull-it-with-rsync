@@ -27,6 +27,7 @@ case $position in
     *)           echo "Second argument MUST be a number 1 to 12";;
 esac
 
+echo "Pulling photo to server."
 rsync -rtu -e ssh --remove-source-files pi@$hstnm:/home/pi/color-test/* $destdir
 
 # The following lines may be convenient
