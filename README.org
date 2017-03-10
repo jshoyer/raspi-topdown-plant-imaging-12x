@@ -262,7 +262,7 @@ for taking and viewing a single snapshot.
    to avoid potential for confusion and/or loss of data
    caused by the start and end of daylight savings time.
    If you are not using UTC
-   (controlled via =raspi-config= internalization settings),
+   (controlled via =raspi-config= internationalization settings),
    the start and end of daylight savings time
    may trigger an automatic clock shift on each raspi,
    which can result in the photo capture schedule
