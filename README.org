@@ -284,6 +284,10 @@ for taking and viewing a single snapshot.
      to the new light schedule can alter growth.
      Shifting the start of zeitgeber (ZT) time
      also makes the experiment more difficult to describe.
+   - Switching the timezone on a RasPi
+     takes effect without requiring a reboot,
+     but this will *not* alter cron scheduling
+     until you =sudo service cron restart=
 4. Make sure your raspis are drawing sufficient power!
    The camera boards draw extra power during photo capture,
    which can cause one or more raspis
