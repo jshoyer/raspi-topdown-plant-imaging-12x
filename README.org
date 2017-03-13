@@ -260,10 +260,10 @@ for taking and viewing a single snapshot.
 3. We have used our local timezone in the past,
    but now recommend using Universal Coordinated Time (UTC)
    to avoid potential for confusion and/or loss of data
-   caused by the start and end of daylight savings time.
+   caused by the start and end of daylight saving time.
    If you are not using UTC
    (controlled via =raspi-config= internationalization settings),
-   the start and end of daylight savings time
+   the start and end of daylight saving time
    may trigger an automatic clock shift on each raspi,
    which can result in the photo capture schedule
    being offset by one hour
@@ -278,7 +278,7 @@ for taking and viewing a single snapshot.
      These are both equivalent to 1430 to 2230 UTC.
    - Some growth chamber controllers
      automatically shift the light cycle
-     at the start and end of daylight savings time.
+     at the start and end of daylight saving time.
      This shift is arguably bad,
      because re-entrainment of plant circadian clocks
      to the new light schedule can alter growth.
