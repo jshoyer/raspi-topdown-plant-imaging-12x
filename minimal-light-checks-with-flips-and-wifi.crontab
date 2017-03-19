@@ -12,26 +12,27 @@
 # mail to j.s.hoyer at wustl dot edu
 # Started 2016-01-22.
 
+# We assume that the timezone on the pi is set to UTC.
 # Turn wifi off at night, to avoid blue LED light from dongle.
 # Leave an hour of flex time to sync any missed images, if needed.
-40 17 * * * sudo ifdown wlan0
+40 23 * * * sudo ifdown wlan0
 
 # Turn back on just before dawn
-20  8 * * * sudo ifup wlan0
+20 14 * * * sudo ifup wlan0
 
 # Uncomment some subset of the following
 # to check lights-on time:
-#29,30,31,32,33,34  8 * * * /bin/sleep 50; /usr/bin/raspistill -vf -hf -o  /home/pi/predawn-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
-#29,30,31,32,33,34  8 * * * /bin/sleep 40; /usr/bin/raspistill -vf -hf -o  /home/pi/predawn-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
-#29,30,31,32,33,34  8 * * * /bin/sleep 30; /usr/bin/raspistill -vf -hf -o  /home/pi/predawn-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
-#29,30,31,32,33,34  8 * * * /bin/sleep 20; /usr/bin/raspistill -vf -hf -o  /home/pi/predawn-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
-#29,30,31,32,33,34  8 * * * /bin/sleep 10; /usr/bin/raspistill -vf -hf -o  /home/pi/predawn-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
-#29,30,31,32,33,34  8 * * *                /usr/bin/raspistill -vf -hf -o  /home/pi/predawn-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#29,30,31,32,33,34 14 * * * /bin/sleep 50; /usr/bin/raspistill -vf -hf -o  /home/pi/predawn-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#29,30,31,32,33,34 14 * * * /bin/sleep 40; /usr/bin/raspistill -vf -hf -o  /home/pi/predawn-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#29,30,31,32,33,34 14 * * * /bin/sleep 30; /usr/bin/raspistill -vf -hf -o  /home/pi/predawn-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#29,30,31,32,33,34 14 * * * /bin/sleep 20; /usr/bin/raspistill -vf -hf -o  /home/pi/predawn-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#29,30,31,32,33,34 14 * * * /bin/sleep 10; /usr/bin/raspistill -vf -hf -o  /home/pi/predawn-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#29,30,31,32,33,34 14 * * *                /usr/bin/raspistill -vf -hf -o  /home/pi/predawn-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
 
 # check lights-off time:
-#30,31,32,33,34 16 * * * /bin/sleep 50; /usr/bin/raspistill -vf -hf -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
-#30,31,32,33,34 16 * * * /bin/sleep 40; /usr/bin/raspistill -vf -hf -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
-#30,31,32,33,34 16 * * * /bin/sleep 30; /usr/bin/raspistill -vf -hf -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
-#30,31,32,33,34 16 * * * /bin/sleep 20; /usr/bin/raspistill -vf -hf -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
-#30,31,32,33,34 16 * * * /bin/sleep 10; /usr/bin/raspistill -vf -hf -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
-#30,31,32,33,34 16 * * *                /usr/bin/raspistill -vf -hf -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#30,31,32,33,34 22 * * * /bin/sleep 50; /usr/bin/raspistill -vf -hf -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#30,31,32,33,34 22 * * * /bin/sleep 40; /usr/bin/raspistill -vf -hf -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#30,31,32,33,34 22 * * * /bin/sleep 30; /usr/bin/raspistill -vf -hf -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#30,31,32,33,34 22 * * * /bin/sleep 20; /usr/bin/raspistill -vf -hf -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#30,31,32,33,34 22 * * * /bin/sleep 10; /usr/bin/raspistill -vf -hf -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#30,31,32,33,34 22 * * *                /usr/bin/raspistill -vf -hf -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
