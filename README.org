@@ -19,7 +19,7 @@ It is very unlikely
 that you will be able to use them directly
 without substantial modification.
 In particular,
-the hostnames for the twelve raspis
+the hostnames for the twelve RasPis
 (e.g. =ch129-pos01=)
 are hardcoded into the files.
 We suggest
@@ -63,7 +63,7 @@ under [[https://www.raspberrypi.org/documentation/][RaspberryPi.org/documentatio
 We recommend examining
 examples of similar approaches:
 - http://phenotiki.com -- includes tools for configuration via a web browser.
-- Ansible-based configuration for a larger-scale experiment:
+- Ansible-based configuration for ~10-fold larger imaging setups:
   1. https://github.com/calizarr/EPSCoR_Bramble_GH9C/
   2. Simplified version for topdown RasPiCam imaging:
      https://github.com/maliagehan/gehan-bramble
@@ -84,7 +84,7 @@ including a timelapse video of rosette growth.
 *** =cron= tables
 **** Image capture schedule
 
-We install a cron table on each raspi.
+We install a cron table on each RasPi.
 There are two variants of this cron table:
 [[file:photograph-every-5min.crontab]] and
 [[file:photograph-with-flips-every-5min.crontab]].
@@ -112,8 +112,8 @@ from the USB WiPi dongles we use.
 (This will not be an issue if you use
  the built-in wifi module on a model 3 Raspberry Pi board.)
 We additionally turn off the green and red indicator LEDs
-on each raspi board
-by editing the /boot/config.txt file on each raspi:
+on each RasPi board
+by editing the /boot/config.txt file on each RasPi:
 #+BEGIN_SRC
 dtparam=act_led_trigger=none
 dtparam=act_led_activelow=off
@@ -124,7 +124,7 @@ dtparam=pwr_led_activelow=off
 With these parameters set,
 light from the red LED
 effectively becomes an indicator
-that a raspi has crashed
+that a RasPi has crashed
 (but is still drawing sufficient power to function),
 as opposed to simply suffering
 from network connectivity problems.
@@ -149,12 +149,12 @@ than will fit on a single SD card.
 **** Helper scripts
 Two shell scripts are provided
 to streamline starting and ending
-image capture on all twelve raspis at once.
+image capture on all twelve RasPis at once.
 - The [[file:install-twelve-crontabs][first script]]
   is used at the start of an experiment
   (or after adjusting a cron table).
   This file copies the appropriate cron table
-  onto each of the twelve raspis
+  onto each of the twelve RasPis
   (if necessary)
   and then installs it.
   The script is run without arguments:
@@ -178,13 +178,13 @@ for taking and viewing a single snapshot.
    that plants are positioned appropriately.
    This is an excellent time to photograph color standard cards,
    to enable later assessment of sensor drift.
-   To take a snapshot with the raspi in position #1,
+   To take a snapshot with the RasPi in position #1,
    run the script like so:
    =./take-one-picture-and-pull-it-with-rsync /path/on/cluster/ 1=
    - You could run this command (and the next one)
      from your local computer,
      but things will be easier if you run them on a remote server.
-2. Install the correct cron table on each raspi
+2. Install the correct cron table on each RasPi
    (as mentioned above)
    to start regular image capture:
    =./install-twelve-crontabs=
@@ -264,7 +264,7 @@ for taking and viewing a single snapshot.
    If you are not using UTC
    (controlled via =raspi-config= internationalization settings),
    the start and end of daylight saving time
-   may trigger an automatic clock shift on each raspi,
+   may trigger an automatic clock shift on each RasPi,
    which can result in the photo capture schedule
    being offset by one hour
    relative to the light cycle.
@@ -288,9 +288,9 @@ for taking and viewing a single snapshot.
      takes effect without requiring a reboot,
      but this will *not* alter cron scheduling
      until you =sudo service cron restart=
-4. Make sure your raspis are drawing sufficient power!
+4. Make sure your RasPis are drawing sufficient power!
    The camera boards draw extra power during photo capture,
-   which can cause one or more raspis
+   which can cause one or more RasPis
    sharing an inadequate power supply to crash.
    See https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
 
@@ -308,7 +308,7 @@ by transient wifi interference,
 and merely delays transfer of the relevant files
 until the next cycle.
 Multiple failed transfers
-can indicate that a raspi has crashed,
+can indicate that a RasPi has crashed,
 especially when initial connection was the step that failed.
 (Interrupted transfers are a lagging indicator,
  because rsync processes persist for quite a while
