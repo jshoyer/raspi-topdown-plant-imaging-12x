@@ -12,7 +12,6 @@
 # mail to j.s.hoyer at wustl dot edu
 # Started 2016-01-22.
 
-# We assume that the timezone on the pi is set to UTC.
 # Turn wifi off at night, to avoid blue LED light from dongle.
 # Leave an hour of flex time to sync any missed images, if needed.
 40 23 * * * sudo ifdown wlan0
