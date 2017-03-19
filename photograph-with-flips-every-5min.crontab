@@ -11,7 +11,8 @@
 # and therefore their images need vertical and horizontal flips
 # for the orientation to be consistent with the others.
 
-# We assume that the timezone on the pi is set to UTC.
+# We assume that the timezone on each RasPi is set to UTC---see README.org
+# and photograph-every-5min.crontab
 
 # Save raw Bayer data
 # for first image of the day    V

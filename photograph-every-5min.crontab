@@ -10,7 +10,13 @@
 # Cf. the nearly identical file:photograph-with-flips-every-5min.crontab
 # for the five RasPis that are oriented 180° the other way.
 
-# We assume that the timezone on the pi is set to UTC.
+# We assume that the timezone on each RasPi is set to UTC---see README.org
+# We could force cron to use UTC by uncommenting the following:
+#CRON_TZ=UTC
+# (and then running 'sudo service cron restart').
+# However, if we did that,
+# the file names would still match the system timezone,
+# which could cause confusion.
 
 # Save raw Bayer data
 # for first image of the day    V
