@@ -1,12 +1,12 @@
 
-# Pull images from each raspi twice per hour (staggered, for one pull every 2 to 3 minutes).
+# Pull images from each RasPi twice per hour (staggered, for one pull every 2 to 3 minutes).
 # Copyright (c) 2017 Donald Danforth Plant Science Center -- see LICENSE-MIT
 # mail to j.s.hoyer at wustl dot edu
 
 # For error alert emails: if desired.
 # MAILTO=
 
-# Other crontabs in this directory take care of the raspi end of things.
+# Other crontabs in this directory take care of the RasPi end of things.
 
 RASPIDIR=/home/pi/images
 # Adjust this line at the start of each new experiment:
@@ -20,7 +20,7 @@ SERVERDIR=/home/jhoyer/share/raspi/experiments/2017-01-27_Col-0/photos
 
 ### Upper level of chamber 129
 # Minute time = 1 + 5 * i and 31 + 5 * i
-# where i is raspicam position number.
+# where i is RaspiCam position number.
 # Very first 'standard' pull at 8:36 AM:
 36 8-16 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos01:$RASPIDIR/* $SERVERDIR/fov-01/
  6 9-16 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos01:$RASPIDIR/* $SERVERDIR/fov-01/
@@ -44,7 +44,7 @@ SERVERDIR=/home/jhoyer/share/raspi/experiments/2017-01-27_Col-0/photos
 
 ### Lower level of chamber 129
 # Minute time = 5 * i - 2 and 5 * i - 32
-# where i is raspicam position number
+# where i is RaspiCam position number
 33 9-16 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos07:$RASPIDIR/* $SERVERDIR/fov-07/
  3 9-16 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos07:$RASPIDIR/* $SERVERDIR/fov-07/
 

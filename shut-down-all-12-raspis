@@ -11,14 +11,14 @@
 
 # Original version did not work quickly,
 # because no timeout period was specified;
-# there was a long lag after the pi shuts down
+# there was a long lag after each RasPi shut down
 # before the SSH connection ends.
 
 MSG_KILLED_GOOD="A 'Killed by signal 15' message
 indicates that shutdown probably succeeded."
 
 # A five second timeout is not all that long;
-# raspis with a flaky network connection will be missed.
+# RasPis with a flaky network connection will be missed.
 # At some point it becomes easier
 # to run the commands below individually.
 # Do not specify any timeout

@@ -1,12 +1,12 @@
 
-# Standard raspi 8-hour day photography schedule (with flips),
+# Standard RasPi 8-hour day photography schedule (with flips),
 # plus disconnection of wifi at night.
 
 # Copyright (c) 2017 Donald Danforth Plant Science Center -- see LICENSE-MIT
 # mail to j.s.hoyer at wustl dot edu
 # Started 2016-01-22.
 
-# The raspis in positions 4, 6, 9, 10, and 11
+# The RasPis in positions 4, 6, 9, 10, and 11
 # are "backwards"
 # and therefore their images need vertical and horizontal flips
 # for the orientation to be consistent with the others.

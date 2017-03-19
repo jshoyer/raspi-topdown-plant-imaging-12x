@@ -1,12 +1,12 @@
 #!/usr/bin/env sh
 
-# Rsync each crontab to the relevant pi, then install.
+# Rsync each crontab to the relevant RasPi, then install.
 
 # Copyright (c) 2017 Donald Danforth Plant Science Center -- see LICENSE-MIT
 # mail to j.s.hoyer at wustl dot edu
 # Started 2016-07-04.
 
-echo "Copying and installing a new cron table on each pi."
+echo "Copying and installing a new cron table on each RasPi."
 echo "RasPi in position 1"
 rsync -rtu -e ssh minimal-light-checks-and-wifi.crontab pi@ch129-pos01:/home/pi/
 ssh pi@ch129-pos01 'crontab /home/pi/minimal-light-checks-and-wifi.crontab'
@@ -33,7 +33,7 @@ rsync -rtu -e ssh minimal-light-checks-and-wifi.crontab pi@ch129-pos12:/home/pi/
 ssh pi@ch129-pos12 'crontab /home/pi/minimal-light-checks-and-wifi.crontab'
 
 
-# The raspis in positions 4, 6, 9, 10, and 11
+# The RasPis in positions 4, 6, 9, 10, and 11
 # are oriented "backwards"
 # and therefore their images need vertical and horizontal flips
 # to be consistent with the others.
