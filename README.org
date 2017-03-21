@@ -97,9 +97,10 @@ Files get names like '2017-02-10_1630_ch129-pos01.jpg',
 where '1630' indicates 4:30 PM (the last capture of the day)
 and 'ch129-pos01' is the hostname
 (chamber 129 position #1, above field-of-view #1).
-We have imaged plants under short-day conditions
+We generally image plants under short-day conditions
 (8 hours of light, from 8:30 AM to 4:30 PM),
 with capture throughout the light phase.
+This branch however, has cron tables for long (16-hour) days.
 See also notes below.
 
 **** Lights and wifi
