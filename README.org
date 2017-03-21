@@ -93,8 +93,9 @@ but the second one does horizontal and vertical flips
 (=-vf -hf= flags)
 because five of our Pi/Camera rigs
 are oriented 180° opposite the others.
-Files get names like '2017-02-10_1630_ch129-pos01.jpg',
-where '1630' indicates 4:30 PM (the last capture of the day)
+Files get names like '2017-02-10_2230_ch129-pos01.jpg',
+where '2230' is a UTC timestamp
+indicating 4:30 PM CST (the last capture of the day)
 and 'ch129-pos01' is the hostname
 (chamber 129 position #1, above field-of-view #1).
 We have imaged plants under short-day conditions
