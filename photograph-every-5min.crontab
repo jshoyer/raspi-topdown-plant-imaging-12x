@@ -20,7 +20,7 @@
 
 # Save raw Bayer data
 # for first image of the day    V
-35 14 * * * /usr/bin/raspistill -r -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
+35 10 * * * /usr/bin/raspistill -r -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
 
 40,45,50,55 10 * * * /usr/bin/raspistill -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
 0,5,10,15,20,25,30,35,40,45,50,55 11-23,0-1 * * * /usr/bin/raspistill -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
