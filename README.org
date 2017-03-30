@@ -93,14 +93,16 @@ but the second one does horizontal and vertical flips
 (=-vf -hf= flags)
 because five of our Pi/Camera rigs
 are oriented 180° opposite the others.
-Files get names like '2017-02-10_1630_ch129-pos01.jpg',
-where '1630' indicates 4:30 PM (the last capture of the day)
-and 'ch129-pos01' is the hostname
+Files get names like '2017-02-10_0300_ch129-pos01.jpg'.
+where '0300' is the photo capture time, 0300 UTC,
+which is 10 PM local time, the last capture of the day.
+'ch129-pos01' is the hostname
 (chamber 129 position #1, above field-of-view #1).
 We generally image plants under short-day conditions
 (8 hours of light, from 8:30 AM to 4:30 PM),
 with capture throughout the light phase.
-This branch however, has cron tables for long (16-hour) days.
+This branch, however, has cron tables for long (16-hour) days,
+with light from 6 AM to 10 PM local time.
 See also notes below.
 
 **** Lights and wifi
@@ -269,7 +271,7 @@ for taking and viewing a single snapshot.
    which can result in the photo capture schedule
    being offset by one hour
    relative to the light cycle.
-   - We have imaged from
+   - We generally image from
      9:30 AM to 5:30 PM local time
      during DST
      (CDT is UTC -0500)
@@ -295,6 +297,40 @@ for taking and viewing a single snapshot.
    sharing an inadequate power supply to crash.
    See https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
 
+
+**** Transfer schedule
+Edge cases (especially the start and end of the day)
+create some potential for error
+when editing cron tables
+The [[file:pull-images-from-raspis.crontab][server cron table]]
+is perhaps the most complicated,
+because of the way I manually staggered file transfers
+(to try to reduce wifi signal interference
+ across the collection of RasPis).
+Fortunately, most errors in the server cron table
+will just cause error messages/overnight sync delays
+and not missed timepoints or loss of data.
+
+The following table of UTC times
+may help you interpret the server cron table
+on this particular code branch.
+First photo capture each day is at 1105 UTC,
+and the last photo capture each day is at 0300 UTC.
+|    | First pull | Last pull |
+|----+------------+-----------|
+|  1 |       11:06 |      03:06 |
+|  2 |       11:08 |      03:08 |
+|  3 |       11:11 |      03:11 |
+|  4 |       11:13 |      03:13 |
+|  5 |       11:16 |      03:16 |
+|----+------------+-----------|
+|  8 |       11:18 |      03:16 |
+|  9 |       11:21 |      03:21 |
+| 10 |       11:23 |      03:23 |
+| 11 |       11:26 |      03:26 |
+| 12 |       11:28 |      03:28 |
+|  6 |       11:31 |      03:01 |
+|  7 |       11:33 |      03:03 |
 
 **** Monitoring
 

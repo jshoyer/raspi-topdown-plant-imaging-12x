@@ -20,17 +20,18 @@
 
 # Save raw Bayer data
 # for first image of the day    V
-35 10 * * * /usr/bin/raspistill -r -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
+ 5 11 * * * /usr/bin/raspistill -r -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
 
-40,45,50,55 10 * * * /usr/bin/raspistill -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
-0,5,10,15,20,25,30,35,40,45,50,55 11-23,0-1 * * * /usr/bin/raspistill -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
-0,5,10,15,20,25  2 * * * /usr/bin/raspistill -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
+    10,15,20,30,35,40,45,50,55 11 * * * /usr/bin/raspistill -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
+0,5,10,15,20,25,30,35,40,45,50,55 12-23,0-2 * * * /usr/bin/raspistill -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
 
 # Also save raw sensor data for last image of the day.
-30  2 * * * /usr/bin/raspistill -r -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
+ 0  3 * * * /usr/bin/raspistill -r -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
 
 
-# Turn wifi off at night, to avoid blue LED light from dongle
+# Turn wifi off at night, to avoid blue LED light from dongle.
+# Leave 40 minutes of flex time after lights-out,
+# so we can pull the last set of photos for the day.
 40  3 * * * sudo ifdown wlan0
-# Turn back on just before dawn
-20 10 * * * sudo ifup wlan0
+# Turn back on 10 minutes before dawn
+50 10 * * * sudo ifup wlan0
