@@ -194,7 +194,7 @@ for taking and viewing a single snapshot.
    to pull photos:
    =crontab pull-images-from-raspis.crontab=
 
-See also the note below on [[#Monitoring]].
+See also the note below on [[#monitoring]].
 
 **** Ending imaging
 1. Stop image capture;
