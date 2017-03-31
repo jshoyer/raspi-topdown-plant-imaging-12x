@@ -25,7 +25,7 @@ SERVERDIR=/home/jhoyer/share/raspi/experiments/2017-01-27_Col-0/photos
 ### Upper level of chamber 129
 # Minute time = 1 + 5 * i and 31 + 5 * i
 # where i is RaspiCam position number.
-# Very first 'standard' pull at 8:36 AM:
+# Very first pull of the day:
 36 10-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos01:$RASPIDIR/* $SERVERDIR/fov-01/
  6 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos01:$RASPIDIR/* $SERVERDIR/fov-01/
  # At 8:06 AM, the first image of the day has not yet been captured
@@ -64,6 +64,6 @@ SERVERDIR=/home/jhoyer/share/raspi/experiments/2017-01-27_Col-0/photos
 53 10-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos11:$RASPIDIR/* $SERVERDIR/fov-11/
 23 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos11:$RASPIDIR/* $SERVERDIR/fov-11/
 
-# Last 'standard' pull of the day at 4:58 PM:
+# Last pull of the day:
 58 10-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos12:$RASPIDIR/* $SERVERDIR/fov-12/
 28 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos12:$RASPIDIR/* $SERVERDIR/fov-12/
