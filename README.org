@@ -68,7 +68,7 @@ examples of similar approaches:
   2. Simplified version for topdown RasPiCam imaging:
      https://github.com/maliagehan/gehan-bramble
 
-These files here are used for acquiring data.
+The files in this repository are used for acquiring data.
 For processing and analysis
 of the resulting image files
 you may want to use
@@ -195,6 +195,7 @@ for taking and viewing a single snapshot.
    to pull photos:
    =crontab pull-images-from-raspis.crontab=
 
+See also the note below on [[#monitoring]].
 
 **** Ending imaging
 1. Stop image capture;
@@ -208,8 +209,9 @@ for taking and viewing a single snapshot.
    =./take-one-picture-and-pull-it-with-rsync /path/on/cluster/ 1=
 
 
-**** Pitfalls
-1. Watch out for color drift
+*** Other notes
+**** Color
+   Watch out for color drift
    and consider including standards in your field of view.
    By default, =raspistill= automatically picks
    exposure and color balance settings
@@ -235,7 +237,9 @@ for taking and viewing a single snapshot.
      to enable post-processing,
      but only for the first and last capture of the day.
    - Lots of room for improvement here!
-2. The clock built into our growth chamber control board
+
+**** Clock drift
+   The clock built into our growth chamber control board
    does not automatically recalibrate itself
    by synchronizing with a server,
    and so the clock steadily drifts forward,
@@ -258,7 +262,22 @@ for taking and viewing a single snapshot.
      We use [[file:shut-down-all-12-raspis][a shell script]]
      to shut down our twelve RasPis,
      and they turn back on automatically after power is restored.
-3. We have used our local timezone in the past,
+   - Clock drift is one reason we do not try to "squeeze in"
+     a photo capture at the very start of the day.
+     Instead, we wait nearly nearly five minutes
+     before taking the first photo
+     (at 8:35 AM, for example).
+   - In our growth chamber,
+     the lights take 1 minute to ramp up to full intensity
+     (e.g. from 8:30 to 8:31 AM).
+     The lights turn off promptly at the end of the light cycle
+     (e.g. at 4:31 PM).
+     A one minute margin of safety
+     ensures that we have illumination
+     for the very last photo capture each day.
+
+**** Timezone
+   We have used our local timezone in the past,
    but now recommend using Universal Coordinated Time (UTC)
    to avoid potential for confusion and/or loss of data
    caused by the start and end of daylight saving time.
@@ -289,7 +308,9 @@ for taking and viewing a single snapshot.
      takes effect without requiring a reboot,
      but this will *not* alter cron scheduling
      until you =sudo service cron restart=
-4. Make sure your RasPis are drawing sufficient power!
+
+**** Power
+   Make sure your RasPis are drawing sufficient power!
    The camera boards draw extra power during photo capture,
    which can cause one or more RasPis
    sharing an inadequate power supply to crash.
@@ -297,6 +318,9 @@ for taking and viewing a single snapshot.
 
 
 **** Monitoring
+:PROPERTIES:
+:CUSTOM_ID: Monitoring
+:END:
 
 If desired, one can add an email address
 (MAILTO variable)
@@ -335,8 +359,13 @@ primarily as a learning aid
 and as documentation
 for related research papers.
 
-Questions, feedback, and contributions
+Questions and feedback
 are welcome
-via GitHub,
-Bitbucket,
-or GitLab.com.
+via [[https://github.com/jshoyer/raspi-topdown-plant-imaging-12x/issues][GitHub issues]]
+or email (see file headers).
+Mirrors of this project
+are available on
+[[https://bitbucket.org/jshoyer/raspi-topdown-plant-imaging-12x/src][Bitbucket]]
+and [[https://gitlab.com/jshoyer/raspi-topdown-plant-imaging-12x][GitLab.com]].
+Numbered releases are
+[[https://zenodo.org/search?q=pi%20plant%20imaging][archived on Zenodo]].
