@@ -308,8 +308,8 @@ because of the way I manually staggered file transfers
 (to try to reduce wifi signal interference
  across the collection of RasPis).
 Fortunately, most errors in the server cron table
-will just cause error messages/overnight sync delays
-and not missed timepoints or loss of data.
+will merely cause error messages/overnight sync delays---errors
+should not cause loss of data.
 
 The following table of UTC times
 may help you interpret the server cron table
