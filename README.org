@@ -101,8 +101,11 @@ which is 10 PM local time, the last capture of the day.
 We generally image plants under short-day conditions
 (8 hours of light, from 8:30 AM to 4:30 PM),
 with capture throughout the light phase.
-This branch, however, has cron tables for long (16-hour) days,
-with light from 6 AM to 10 PM local time.
+We also include configuration files (cron tables)
+long days (16-hour,
+with light from 6 AM to 10 PM local time)
+and and medium (12-hour) days
+in subdirectories.
 See also notes below.
 
 **** Lights and wifi
@@ -313,7 +316,7 @@ should not cause loss of data.
 
 The following table of UTC times
 may help you interpret the server cron table
-on this particular code branch.
+for 16-hour days.
 First photo capture each day is at 1105 UTC,
 and the last photo capture each day is at 0300 UTC.
 |    | First pull | Last pull |
