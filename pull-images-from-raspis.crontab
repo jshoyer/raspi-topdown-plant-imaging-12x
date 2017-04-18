@@ -28,8 +28,6 @@ SERVERDIR=/home/jhoyer/share/raspi/experiments/2017-03-24_Col-0/photos
 # Very first pull of the day:
 36 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos01:$RASPIDIR/* $SERVERDIR/fov-01/
  6 11-23,0-3 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos01:$RASPIDIR/* $SERVERDIR/fov-01/
- # At 8:06 AM, the first image of the day has not yet been captured
- # so trying to do a sync at that time would cause an error.
 
 41 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos02:$RASPIDIR/* $SERVERDIR/fov-02/
 11 11-23,0-3 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos02:$RASPIDIR/* $SERVERDIR/fov-02/
