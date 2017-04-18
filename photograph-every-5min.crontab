@@ -32,6 +32,6 @@
 # Turn wifi off at night, to avoid blue LED light from dongle.
 # Leave 40 minutes of flex time after lights-out,
 # so we can pull the last set of photos for the day.
-40  3 * * * sudo ifdown wlan0
+40 23 * * * sudo ifdown wlan0
 # Turn back on 10 minutes before dawn
 50 10 * * * sudo ifup wlan0
