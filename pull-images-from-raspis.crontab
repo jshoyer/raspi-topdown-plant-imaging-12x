@@ -26,42 +26,42 @@ SERVERDIR=/home/jhoyer/share/raspi/experiments/2017-03-24_Col-0/photos
 # Minute time = 1 + 5 * i and 31 + 5 * i
 # where i is RaspiCam position number.
 # Very first pull of the day:
-36 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos01:$RASPIDIR/* $SERVERDIR/fov-01/
- 6 11-23,0-3 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos01:$RASPIDIR/* $SERVERDIR/fov-01/
+36 11-22 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos01:$RASPIDIR/* $SERVERDIR/fov-01/
+ 6 11-23 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos01:$RASPIDIR/* $SERVERDIR/fov-01/
 
-41 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos02:$RASPIDIR/* $SERVERDIR/fov-02/
-11 11-23,0-3 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos02:$RASPIDIR/* $SERVERDIR/fov-02/
+41 11-22 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos02:$RASPIDIR/* $SERVERDIR/fov-02/
+11 11-23 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos02:$RASPIDIR/* $SERVERDIR/fov-02/
 
-46 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos03:$RASPIDIR/* $SERVERDIR/fov-03/
-16 11-23,0-3 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos03:$RASPIDIR/* $SERVERDIR/fov-03/
+46 11-22 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos03:$RASPIDIR/* $SERVERDIR/fov-03/
+16 11-23 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos03:$RASPIDIR/* $SERVERDIR/fov-03/
 
-51 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos04:$RASPIDIR/* $SERVERDIR/fov-04/
-21 11-23,0-3 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos04:$RASPIDIR/* $SERVERDIR/fov-04/
+51 11-22 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos04:$RASPIDIR/* $SERVERDIR/fov-04/
+21 11-23 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos04:$RASPIDIR/* $SERVERDIR/fov-04/
 
-56 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos05:$RASPIDIR/* $SERVERDIR/fov-05/
-26 11-23,0-3 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos05:$RASPIDIR/* $SERVERDIR/fov-05/
+56 11-22 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos05:$RASPIDIR/* $SERVERDIR/fov-05/
+26 11-23 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos05:$RASPIDIR/* $SERVERDIR/fov-05/
 
-31 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos06:$RASPIDIR/* $SERVERDIR/fov-06/
- 1 12-23,0-3 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos06:$RASPIDIR/* $SERVERDIR/fov-06/
+31 11-22 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos06:$RASPIDIR/* $SERVERDIR/fov-06/
+ 1 12-23 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos06:$RASPIDIR/* $SERVERDIR/fov-06/
 
 ### Lower level of chamber 129
 # Minute time = 5 * i - 2 and 5 * i - 32
 # where i is RaspiCam position number
-33 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos07:$RASPIDIR/* $SERVERDIR/fov-07/
- 3 12-23,0-3 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos07:$RASPIDIR/* $SERVERDIR/fov-07/
+33 11-22 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos07:$RASPIDIR/* $SERVERDIR/fov-07/
+ 3 12-23 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos07:$RASPIDIR/* $SERVERDIR/fov-07/
 
-38 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos08:$RASPIDIR/* $SERVERDIR/fov-08/
- 8 11-23,0-3 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos08:$RASPIDIR/* $SERVERDIR/fov-08/
+38 11-22 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos08:$RASPIDIR/* $SERVERDIR/fov-08/
+ 8 11-23 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos08:$RASPIDIR/* $SERVERDIR/fov-08/
 
-43 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos09:$RASPIDIR/* $SERVERDIR/fov-09/
-13 11-23,0-3 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos09:$RASPIDIR/* $SERVERDIR/fov-09/
+43 11-22 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos09:$RASPIDIR/* $SERVERDIR/fov-09/
+13 11-23 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos09:$RASPIDIR/* $SERVERDIR/fov-09/
 
-48 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos10:$RASPIDIR/* $SERVERDIR/fov-10/
-18 11-23,0-3 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos10:$RASPIDIR/* $SERVERDIR/fov-10/
+48 11-22 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos10:$RASPIDIR/* $SERVERDIR/fov-10/
+18 11-23 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos10:$RASPIDIR/* $SERVERDIR/fov-10/
 
-53 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos11:$RASPIDIR/* $SERVERDIR/fov-11/
-23 11-23,0-3 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos11:$RASPIDIR/* $SERVERDIR/fov-11/
+53 11-22 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos11:$RASPIDIR/* $SERVERDIR/fov-11/
+23 11-23 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos11:$RASPIDIR/* $SERVERDIR/fov-11/
 
 # Last pull of the day:
-58 11-23,0-2 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos12:$RASPIDIR/* $SERVERDIR/fov-12/
-28 11-23,0-3 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos12:$RASPIDIR/* $SERVERDIR/fov-12/
+58 11-22 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos12:$RASPIDIR/* $SERVERDIR/fov-12/
+28 11-23 * * * rsync --remove-source-files -rtu -e ssh pi@ch129-pos12:$RASPIDIR/* $SERVERDIR/fov-12/

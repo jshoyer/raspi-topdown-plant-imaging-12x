@@ -10,7 +10,7 @@
 
 # Turn wifi off at night, to avoid blue LED light from dongle.
 # Leave 40 minutes of flex time after lights-off.
-40  3 * * * sudo ifdown wlan0
+40  23 * * * sudo ifdown wlan0
 # Turn back on just before dawn
 50 10 * * * sudo ifup wlan0
 
@@ -24,9 +24,9 @@
 #0,1,2,3,4 11 * * * /bin/sleep  5; /usr/bin/raspistill -o  /home/pi/predawn-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
 
 # check lights-off time:
-#0,1,2,3,4  3 * * * /bin/sleep 55; /usr/bin/raspistill -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
-#0,1,2,3,4  3 * * * /bin/sleep 45; /usr/bin/raspistill -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
-#0,1,2,3,4  3 * * * /bin/sleep 35; /usr/bin/raspistill -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
-#0,1,2,3,4  3 * * * /bin/sleep 25; /usr/bin/raspistill -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
-#0,1,2,3,4  3 * * * /bin/sleep 15; /usr/bin/raspistill -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
-#0,1,2,3,4  3 * * * /bin/sleep  5; /usr/bin/raspistill -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#0,1,2,3,4  23 * * * /bin/sleep 55; /usr/bin/raspistill -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#0,1,2,3,4  23 * * * /bin/sleep 45; /usr/bin/raspistill -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#0,1,2,3,4  23 * * * /bin/sleep 35; /usr/bin/raspistill -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#0,1,2,3,4  23 * * * /bin/sleep 25; /usr/bin/raspistill -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#0,1,2,3,4  23 * * * /bin/sleep 15; /usr/bin/raspistill -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg
+#0,1,2,3,4  23 * * * /bin/sleep  5; /usr/bin/raspistill -o /home/pi/postdusk-images/$(date +"\%Y-\%m-\%d_\%H\%M\%S")_$(hostname).jpg

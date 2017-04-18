@@ -23,10 +23,10 @@
  5 11 * * * /usr/bin/raspistill -r -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
 
     10,15,20,30,35,40,45,50,55 11 * * * /usr/bin/raspistill -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
-0,5,10,15,20,25,30,35,40,45,50,55 12-23,0-2 * * * /usr/bin/raspistill -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
+0,5,10,15,20,25,30,35,40,45,50,55 12-22 * * * /usr/bin/raspistill -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
 
 # Also save raw sensor data for last image of the day.
- 0  3 * * * /usr/bin/raspistill -r -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
+ 0  23 * * * /usr/bin/raspistill -r -q 100 -o /home/pi/images/$(date +"\%Y-\%m-\%d_\%H\%M")_$(hostname).jpg
 
 
 # Turn wifi off at night, to avoid blue LED light from dongle.
