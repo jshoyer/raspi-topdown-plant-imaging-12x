@@ -67,6 +67,14 @@ examples of similar approaches:
   1. https://github.com/calizarr/EPSCoR_Bramble_GH9C/
   2. Simplified version for topdown RasPiCam imaging:
      https://github.com/maliagehan/gehan-bramble
+- Gigavision ([[https://github.com/borevitzlab/Gigavision][code]],
+  [[https://borevitzlab.github.io/Gigavision/index.html][docs]]) --
+  works with both RasPiCams and DSLRs.
+  Requires ansible, OpenCV 3,
+  and several python packages, including Flask.
+
+# The following older project did not entirely make sense to me:
+# https://github.com/cobbystreet/picam
 
 The files in this repository are used for acquiring data.
 For processing and analysis
@@ -234,7 +242,15 @@ See also the note below on [[#monitoring]].
      into JPEG file exif metadata
      (=raspistill -r= flag)
      to enable post-processing,
-     but only for the first and last capture of the day.
+     but we only do this for the first and last capture of the day,
+     to conserve disk space and network bandwidth.
+   - The author of the python =picamera= package
+     [[https://picamera.readthedocs.io/en/latest/recipes1.html#consistent-capture][recommends]]
+     fixing shutter speed, analog gain, digital gain,
+     white balance (red and blue) gains,
+     and ISO.
+     Exif metadata from a few autocaptured photos
+     may help with selecting appropriate values for each of these variables.
    - Lots of room for improvement here!
 
 **** Clock drift
