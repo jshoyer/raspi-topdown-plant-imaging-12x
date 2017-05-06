@@ -14,7 +14,7 @@ CRON_TZ=UTC
 
 RASPIDIR=/home/pi/images
 # Adjust this line at the start of each new experiment:
-SERVERDIR=/home/jhoyer/share/raspi/experiments/2017-02-19_g-mutants/photos
+SERVERDIR=/home/jhoyer/share/raspi/experiments/2017-04-28_Ler/photos
 
 # Delay position #1-6 pulls by one minute to avoid ~temporary file
 # "vanished before they could be transferred" errors
