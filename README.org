@@ -383,4 +383,4 @@ are available on
 [[https://bitbucket.org/jshoyer/raspi-topdown-plant-imaging-12x/src][Bitbucket]]
 and [[https://gitlab.com/jshoyer/raspi-topdown-plant-imaging-12x][GitLab.com]].
 Numbered releases are
-[[https://zenodo.org/search?q=pi%20plant%20imaging][archived on Zenodo]].
+[[https://doi.org/10.5281/zenodo.594707][archived on Zenodo]].
