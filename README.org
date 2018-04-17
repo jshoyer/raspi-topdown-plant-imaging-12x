@@ -263,13 +263,14 @@ See also the note below on [[#monitoring]].
    The clock built into our growth chamber control board
    does not automatically recalibrate itself
    by synchronizing with a server,
-   and so the clock steadily drifts forward,
+   and so the clock steadily drifts,
    at a rate of ~3 seconds per day
    (~1 minute every three weeks).
    Unless the clock is manually corrected,
    the light schedule will eventually shift far enough
    that the first photo of the day will be captured
-   before "sunrise".
+   before "sunrise"
+   or after "sunset.
    - The most reliable way to deal with this issue
      is to manually calibrate the chamber clock
      shortly before the start of every new experiment.
