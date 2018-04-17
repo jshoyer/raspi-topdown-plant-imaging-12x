@@ -70,7 +70,7 @@ We recommend examining
 examples of similar approaches:
 - http://phenotiki.com -- includes tools for configuration via a web browser.
 - Ansible-based configuration for ~10-fold larger imaging setups:
-  1. https://github.com/calizarr/EPSCoR_Bramble_GH9C/
+  1. https://github.com/calizarr/PhenoPiSight
   2. Simplified version for topdown RasPiCam imaging:
      https://github.com/maliagehan/gehan-bramble
 - Gigavision ([[https://github.com/borevitzlab/Gigavision][code]],
