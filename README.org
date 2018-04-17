@@ -21,7 +21,7 @@ for physical set-up and configuration
 of top-down and other imaging systems:
 https://doi.org/10.1002/aps3.1031
 
-It is very unlikely
+It is unlikely
 that you will be able to use the files here
 without substantial modification.
 In particular,
@@ -54,7 +54,7 @@ for developing and practicing command line skills.
 
 Copyright © 2017
 [[https://www.danforthcenter.org/][Donald Danforth Plant Science Center]].
-See [[file:LICENSE-MIT]].
+See [[file:LICENSE]].
 
 
 **** Links
@@ -71,7 +71,7 @@ examples of similar approaches:
 - http://phenotiki.com -- includes tools for configuration via a web browser.
 - Ansible-based configuration for ~10-fold larger imaging setups:
   1. https://github.com/calizarr/PhenoPiSight
-  2. Simplified version for topdown RasPiCam imaging:
+  2. Simplified version for top-down RasPiCam imaging:
      https://github.com/maliagehan/gehan-bramble
 - Gigavision ([[https://github.com/borevitzlab/Gigavision][code]],
   [[https://borevitzlab.github.io/Gigavision/index.html][docs]]) --

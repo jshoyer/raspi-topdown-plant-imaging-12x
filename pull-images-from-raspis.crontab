@@ -1,6 +1,6 @@
 
 # Pull images from each RasPi twice per hour (staggered, for one pull every 2 to 3 minutes).
-# Copyright (c) 2017 Donald Danforth Plant Science Center -- see LICENSE-MIT
+# Copyright (c) 2017 Donald Danforth Plant Science Center -- see LICENSE
 # mail to j.s.hoyer at wustl dot edu
 
 # For error alert emails, if desired:
