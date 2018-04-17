@@ -15,8 +15,14 @@ The scripts and cron tables here
 are presented as an example
 of a minimal imaging configuration
 and as research documentation.
+A protocol note published in 2018
+provides step-by-step instructions
+for physical set-up and configuration
+of top-down and other imaging systems:
+https://doi.org/10.1002/aps3.1031
+
 It is very unlikely
-that you will be able to use them directly
+that you will be able to use the files here
 without substantial modification.
 In particular,
 the hostnames for the twelve RasPis
